@@ -14,7 +14,8 @@ This experiment is meant to test this hypothesis.
 * Experimental design
 The subject is presented a white screen, on which strings of letter appear at each trial. He is told that the target letter will always appear at one given location (1/2 degree above the fixation point) and that he should ignore letters appearing at any other position. In all but two control trial where the target letter appears alone, the target letter appears flanked by 3 other letters on either side. 
 The subject is asked to press the right (resp left) key if the target letter is a H or a K, and the left (resp right) key if the target letter is a S or a C. 
-There are five conditions, where the target letter is flanked on either side by : * three repetitions of itself
+There are five conditions, where the target letter is flanked on either side by :
+* three repetitions of itself
 * three repetitions of the letter that was the other member of that response set (Hs are flanked by Ks and vice versa, Cs and flanked by Ss and vice versa)
 *  three occurrences of one of the letters of the opposite response set (Hs and Ks were flanked by either Cs or Ss and vice versa)
 * three letters having features similar to the target set as determined by the Gibson system but excluding the two letters that were members of the target
@@ -23,7 +24,9 @@ set (Hs and Ks are flanked by Ns or Ws or Zs, S and Cs are flanked by Gs or Js o
 
 SEE TABLE (TO BE DONE)
 
+In a second experiment, another independant variable was manipulated : spacing between adjacent letters. All five "noise" conditions were run under three different spacings (0.06 degree of visual angle - as is usual in a printed word -, 1/2 degree and 1 degree). 
 
+RT was collected for all conditions. 
 
 * Implementation
 TO BE DONE 
