@@ -29,7 +29,13 @@ flanker_is_in_the_same_response_set_set = ["KKKHKKK","HHHKHHH","CCCSCCC","SSSCSS
 flanker_is_in_the_different_response_set_set = [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in CS_set for d2 in CS_set for d3 in CS_set for t in HK_set for d4 in CS_set for d5 in CS_set for d6 in CS_set] + [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in HK_set for d2 in HK_set for d3 in HK_set for t in CS_set for d4 in HK_set for d5 in HK_set for d6 in HK_set]
 flanker_has_similar_features_set = [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in NWZ_set for d2 in NWZ_set for d3 in NWZ_set for t in HK_set for d4 in NWZ_set for d5 in NWZ_set for d6 in NWZ_set] + [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in GJQ_set for d2 in GJQ_set for d3 in GJQ_set for t in CS_set for d4 in GJQ_set for d5 in GJQ_set for d6 in GJQ_set]
 flanker_has_dissimilar_features_set = [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in GJQ_set for d2 in GJQ_set for d3 in GJQ_set for t in HK_set for d4 in GJQ_set for d5 in GJQ_set for d6 in GJQ_set] + [d1 + d2 + d3 + t + d4 + d5 + d6 for d1 in NWZ_set for d2 in NWZ_set for d3 in NWZ_set for t in CS_set for d4 in NWZ_set for d5 in NWZ_set for d6 in NWZ_set]
-list_of_conditions = [control_set_no_flanker,flanker_is_the_same_letter_set,flanker_is_in_the_same_response_set_set, flanker_is_in_the_different_response_set_set,flanker_has_similar_features_set,flanker_has_dissimilar_features_set]
+#list_of_conditions = [control_set_no_flanker,flanker_is_the_same_letter_set,flanker_is_in_the_same_response_set_set, flanker_is_in_the_different_response_set_set,flanker_has_similar_features_set,flanker_has_dissimilar_features_set]
+dict_of_conditions = {"control" : control_set_no_flanker, 
+					  "same letter" : flanker_is_the_same_letter_set,
+					  "same response set" : flanker_is_in_the_same_response_set_set, 
+					  "different response set" : flanker_is_in_the_different_response_set_set,
+					  "similar features" : flanker_has_similar_features_set,
+					  "dissimilar features" : flanker_has_dissimilar_features_set}
 
 training_dataset = random.sample(control_set_no_flanker,2) + random.sample(flanker_is_the_same_letter_set,2) + random.sample (flanker_is_in_the_same_response_set_set,2) + random.sample(flanker_is_in_the_different_response_set_set,2) + random.sample (flanker_has_similar_features_set,2) + random.sample(flanker_has_dissimilar_features_set,2)
 test_1_dataset = random.sample(flanker_is_the_same_letter_set,4) + random.sample (flanker_is_in_the_same_response_set_set, 4) + random.sample(flanker_is_in_the_different_response_set_set, 4) + random.sample (flanker_has_similar_features_set,4) + random.sample(flanker_has_dissimilar_features_set,4)
@@ -82,11 +88,10 @@ for i, block in enumerate(exp.blocks):
 		accuracy = ((key == 275) and left_trial)
 
 		condition = -1
-		for n_cond in range(len(list_of_conditions)):
-			if chosen_stim_as_string in list_of_conditions[n_cond] : 
-				condition = n_cond
+		for key, value in dict_of_conditions.items() :
+			if chosen_stim_as_string in value :
+				condition = key
 
-		
 
 		#stocks the variables of interest in the data file
 		exp.data.add([block.name, j, condition, accuracy, rt])
