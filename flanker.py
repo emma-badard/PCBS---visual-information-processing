@@ -115,7 +115,7 @@ for i, block in enumerate(exp.blocks):
 		if condition != "control" : 
 			right_trial = stim[3] in HK_set
 			left_trial = stim[3] in CS_set
-			accuracy = int((((key == expyriment.misc.constants.K_RIGHT) and right_trial) or ((key == expyriment.misc.constants.K_LEFT) and left_trial)))
+			accuracy = (((key == expyriment.misc.constants.K_RIGHT) and right_trial) or ((key == expyriment.misc.constants.K_LEFT) and left_trial))
 	
 		else :
 			accuracy = "NaN"
