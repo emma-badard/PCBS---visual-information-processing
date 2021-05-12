@@ -27,11 +27,18 @@ RT and accuracy is collected for all conditions, and the mean RT across conditio
 
 Implementation
 
-The flanker.py file contains the main code, and the read_data.py file contains the code to read and analyse data. 
+The flanker.py file contains the main code, and the analyse_data.py file contains the code to read and analyse data. Both files are in the "final commit". 
 
 Results
 
-TO BE DONE
+![](images/Figure_1.png)
+
+The RT decreases with increasing dissimilarity of the distractors. This shows that, as hypothesized by the authors, there is an effect of distractors even in an identification-only task, and that the magnitude of this effect covaries with the similarity between target and distractors. It seems logical since, the more similar target and distractors are, the harder it is to distinguish them an identify the target only. 
+
+![](images/Figure_2.png)
+
+The percentage of accuracy is overall very high (the mean for all trials in all conditions is 0.9766). The differences between conditions are not high enough to conclude. 
+
 
 To do
 * In the original paper, another variable was spacing between the letters. It would have constituted a second training set. I did not have time to implement this other variable, since I already had quite a lot of conditions to treat, but I would have liked to implement it.
