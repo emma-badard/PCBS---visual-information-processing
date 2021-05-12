@@ -21,7 +21,7 @@ There are five conditions, where the target letter is flanked on either side by 
 set (Hs and Ks are flanked by Ns or Ws or Zs, S and Cs are flanked by Gs or Js or Qs)
 * three letters having features dissimilar to target set as determined by the Gibson system and excluding the target set (Hs and Ks are flanked by Gs or Js or Qs and Cs and Ss are flanked by Ns or Ws or Zs)
 
-![](https://github.com/emma-badard/PCBS---visual-information-processing/blob/master/images/image.git.1.pdf)
+![](images/image.git.1-page-001.jpg)
 
 RT and accuracy is collected for all conditions, and the mean RT across conditions and percentage accuracy across conditions are presented below. 
 
